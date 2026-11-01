@@ -43,7 +43,6 @@ import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.item.trading.MerchantOffers;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.entity.JukeboxBlockEntity;
 
 import java.util.EnumSet;
 import java.util.List;
@@ -378,12 +377,7 @@ public class KasaneTeto extends AbstractVillager {
             BlockPos c = teto.blockPosition();
             for (BlockPos p : BlockPos.betweenClosed(c.offset(-9, -3, -9), c.offset(9, 3, 9))) {
                 var state = teto.level().getBlockState(p);
-                if (state.is(Blocks.JUKEBOX)
-                        && teto.level().getBlockEntity(p) instanceof JukeboxBlockEntity jukebox
-                        && !jukebox.getRecord().isEmpty()) {
-                    found = JUKEBOX;
-                    break;
-                }
+
                 if (found == NONE && kineticCooldown == 0 && state.hasBlockEntity()
                         && teto.level().getBlockEntity(p) instanceof KineticBlockEntity kinetic
                         && Math.abs(kinetic.getSpeed()) >= 8.0f) {
