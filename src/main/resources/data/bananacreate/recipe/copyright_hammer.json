@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "PWP",
+    "PNP",
+    " S "
+  ],
+  "key": {
+    "P": {
+      "item": "bananacreate:chrome_plate"
+    },
+    "W": {
+      "item": "minecraft:glass_pane"
+    },
+    "N": {
+      "item": "bananacreate:neural_chip"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "bananacreate:copyright_hammer",
+    "count": 1
+  }
+}
