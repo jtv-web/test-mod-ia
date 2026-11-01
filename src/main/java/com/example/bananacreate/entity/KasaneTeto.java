@@ -380,7 +380,7 @@ public class KasaneTeto extends AbstractVillager {
                 var state = teto.level().getBlockState(p);
                 if (state.is(Blocks.JUKEBOX)
                         && teto.level().getBlockEntity(p) instanceof JukeboxBlockEntity jukebox
-                        && jukebox.hasRecord() && jukebox.isPlaying()) {
+                        && !jukebox.getRecord().isEmpty()) {
                     found = JUKEBOX;
                     break;
                 }
